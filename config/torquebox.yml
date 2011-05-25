@@ -1,0 +1,22 @@
+services:
+  TweetGrabber:
+    search_terms:
+      - gaga
+      - bieber
+      - sheen
+    queue:
+      /queue/tweets
+
+queues:
+  /queue/tweets:
+
+messaging:
+  /queue/tweets:
+    TweetStuffer
+
+jobs:
+  tweet.sweeper:
+    job: TweetSweeper
+    cron: "*/15 * * * * ?"
+
+
