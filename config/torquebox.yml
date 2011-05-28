@@ -19,4 +19,8 @@ jobs:
     job: TweetSweeper
     cron: "*/15 * * * * ?"
 
+environment:
+  USERNAME: twitter_username
+  PASSWORD: twitter_password
+
 

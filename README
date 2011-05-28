@@ -1,3 +1,23 @@
 This app was built as a demo during a presentation to Charlotte.rb 
 
 http://torquebox.org/news/2011/05/25/charlotterb-preso/
+
+To run:
+
+1. Download TorqueBox (http://torquebox.org)
+2. Setup TorqueBox according to http://torquebox.org/documentation/current/installation.html#unzip-the-package
+3. Clone this repo: git clone git://github.com/tobias/torquebox-tweetwatch.git
+4. Install bundler and bundle the app: 
+    jruby -S gem install bundler
+    cd torquebox-tweetwatch
+    jruby -S bundle install
+5. Edit config/torquebox.yml, and set your username and password
+6. Run the db migrations:
+    jruby -S rake db:migrate
+7. Deploy the app:
+    jruby -S rake torquebox:deploy
+8. Run TorqueBox:
+    jruby -S rake torquebox:run
+9. Profit!
+
+Find me (tcrawley) on #torquebox at freenode.net if you have any issues.
